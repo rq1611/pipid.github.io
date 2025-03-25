@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun Pipid!</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        text-align: center;
+        max-width: 600px;
+        animation: float 3s ease-in-out infinite;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+        z-index: -1;
+        background-size: 400% 400%;
+        animation: gradient 8s ease infinite;
+        border-radius: 25px;
+      }
+
+      h1 {
+        color: #e91e63;
+        margin-bottom: 15px;
+        font-size: 2.2em;
+      }
+
+      .name {
+        font-size: 2.8em;
+        color: #9c27b0;
+        font-weight: bold;
+        margin: 20px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .message {
+        color: #333;
+        line-height: 1.8;
+        text-align: left;
+        margin: 25px 0;
+        font-size: 1.1em;
+      }
+
+      .balloons {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+      }
+
+      .balloon {
+        width: 60px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 15px;
+        position: relative;
+        animation: float 4s ease-in-out infinite;
+      }
+
+      .balloon:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 60px;
+        background-color: #888;
+        bottom: -60px;
+        left: 50%;
+      }
+
+      .balloon:nth-child(1) {
+        background-color: #e91e63;
+        animation-delay: 0s;
+      }
+
+      .balloon:nth-child(2) {
+        background-color: #9c27b0;
+        animation-delay: 0.3s;
+      }
+
+      .balloon:nth-child(3) {
+        background-color: #2196f3;
+        animation-delay: 0.6s;
+      }
+
+      .balloon:nth-child(4) {
+        background-color: #4caf50;
+        animation-delay: 0.9s;
+      }
+
+      .signature {
+        font-style: italic;
+        margin-top: 30px;
+        color: #666;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-25px);
+        }
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #f00;
+        opacity: 0.7;
+        animation: confetti 5s linear infinite;
+      }
+
+      @keyframes confetti {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(500px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Selamat Ulang Tahun!</h1>
+      <div class="name">Pipid</div>
+
+      <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+      </div>
+
+      <div class="message">
+        <p>
+          Di hari yang istimewa ini, aku ingin mengucapkan selamat ulang tahun
+          untukmu, Pipid!
+        </p>
+
+        <p>
+          Semoga di usia yang baru ini, kamu diberikan kelimpahan kebahagiaan,
+          kesehatan yang prima, dan kesuksesan dalam segala hal yang kamu
+          lakukan. Semoga setiap langkahmu diberkati dan setiap mimpimu perlahan
+          menjadi kenyataan.
+        </p>
+
+        <p>
+          Tahun ini semoga membawa lebih banyak tawa, lebih banyak petualangan
+          seru, dan lebih banyak momen berharga yang akan kamu kenang selamanya.
+          Kamu adalah orang yang luar biasa dengan hati yang baik, dan dunia ini
+          lebih cerah karena kehadiranmu.
+        </p>
+
+        <p>
+          Jangan pernah berhenti bersinar, karena cahayamu menginspirasi banyak
+          orang di sekitarmu. Teruslah menjadi versi terbaik dari dirimu
+          sendiri, karena itulah yang membuatmu begitu spesial.
+        </p>
+
+        <p>
+          Semoga tahun ini menjadi tahun terbaik dalam hidupmu sejauh ini, penuh
+          dengan pencapaian, kebahagiaan, dan cinta. Selamat merayakan hari
+          spesialmu!
+        </p>
+      </div>
+
+      <p>🎉 🎂 🎁 💐</p>
+
+      <div class="signature">Dengan ga tau,<br />Untuk Pipid</div>
+    </div>
+
+    <script>
+      // Create confetti effect
+      function createConfetti() {
+        const colors = [
+          "#e91e63",
+          "#9c27b0",
+          "#2196f3",
+          "#4caf50",
+          "#ffeb3b",
+          "#ff9800",
+        ];
+
+        for (let i = 0; i < 50; i++) {
+          const confetti = document.createElement("div");
+          confetti.className = "confetti";
+          confetti.style.left = Math.random() * 100 + "vw";
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.width = Math.random() * 10 + 5 + "px";
+          confetti.style.height = Math.random() * 10 + 5 + "px";
+          confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+          confetti.style.animationDelay = Math.random() * 5 + "s";
+          document.body.appendChild(confetti);
+        }
+      }
+
+      window.onload = createConfetti;
+    </script>
+  </body>
+</html>
